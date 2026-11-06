@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
 
 namespace Tuerschild
 {
@@ -36,7 +31,6 @@ namespace Tuerschild
         {
             string result = "";
 
-            // LehrerInnen-Liste laden
             UnityWebRequest req = UnityWebRequest.Get(listUrl);
             req.certificateHandler = new BypassCertificate();
             await req.SendWebRequest();
