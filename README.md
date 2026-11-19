@@ -8,6 +8,9 @@ Dieses Unity-Projekt lädt automatisch alle LehrerInnen der HTL Salzburg, filter
 Die Daten stammen direkt von der offiziellen Website:  
 `https://www.htl-salzburg.ac.at/lehrerinnen.html`
 
+Szene: Model 
+Unity Version: 6000.3.24f1
+
 ---
 
 ## Erklärung der Coroutine `IEnumerator LoadTeachers()`
