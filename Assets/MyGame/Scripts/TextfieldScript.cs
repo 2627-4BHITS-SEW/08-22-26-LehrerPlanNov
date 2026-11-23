@@ -50,6 +50,9 @@ namespace Tuerschild
 
             var matches = teacherRegex.Matches(html);
 
+            // Testfall 5: Übersicht erfolgreich geladen?
+            Debug.Log($"[Testfall 5] Raum: {targetRoom} | URL: {req.url} | HTTP-Status: {req.responseCode} | Ergebnis: {req.result} | Detail-Links gesamt: {matches.Count}");
+
             result = $"Lehrer im Raum {targetRoom}:\n\n";
 
             foreach (Match m in matches)
@@ -76,6 +79,9 @@ namespace Tuerschild
                 UnityWebRequest detailReq = UnityWebRequest.Get(baseUrl + link);
                 detailReq.certificateHandler = new BypassCertificate();
                 await detailReq.SendWebRequest();
+
+                // Testfall 3: Detailseite geladen?
+                Debug.Log($"[Testfall 3] Raum: {room} | Lehrkraft: {name} | URL: {detailReq.url} | HTTP-Status: {detailReq.responseCode} | Ergebnis: {detailReq.result}");
 
                 if (detailReq.result != UnityWebRequest.Result.Success)
                     continue;
