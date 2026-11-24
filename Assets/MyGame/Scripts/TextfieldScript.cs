@@ -21,7 +21,7 @@ namespace Tuerschild
 
             if (textComponent.text == $"Lehrer im Raum {targetRoom}:\n\n")
             {
-                textComponent.text = "Keine LehrerInnen gefunden!";
+                textComponent.text = $"Lehrer im Raum {targetRoom}:\n\n" + "Keine LehrerInnen gefunden!";
             }
         }
 
