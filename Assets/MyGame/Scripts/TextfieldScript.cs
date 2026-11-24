@@ -17,9 +17,9 @@ namespace Tuerschild
             targetRoom = gameObject.name.Replace("Sign-", "");
             TMP_Text textComponent = GetComponent<TMP_Text>();
 
-            textComponent.text = await FetchTeachers();
+            textComponent.text = $"Lehrer im Raum {targetRoom}:\n\n" + await FetchTeachers();
 
-            if (textComponent.text == null || textComponent.text == "")
+            if (textComponent.text == $"Lehrer im Raum {targetRoom}:\n\n")
             {
                 textComponent.text = "Keine LehrerInnen gefunden!";
             }
@@ -50,7 +50,6 @@ namespace Tuerschild
 
             var matches = teacherRegex.Matches(html);
 
-            result = $"Lehrer im Raum {targetRoom}:\n\n";
 
             foreach (Match m in matches)
             {
