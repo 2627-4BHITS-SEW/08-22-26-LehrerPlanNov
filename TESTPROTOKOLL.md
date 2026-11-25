@@ -1,9 +1,9 @@
-Testdatum · 
-Getesteter Commit · 
+Testdatum 23.11.2026 
+Getesteter Commit 6117d8
 
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
-| 1 | | | | |
+| 1  | Wählt eine Lehrkraft mit eingetragener Sprechstunde. Vergleicht nach dem Laden die Anzeige mit der Detailseite. | Daten von der Website stimmen überein | Daten von der Webseit stimmen überein | Bestanden |
 
 Testdatum · 5.11.2026
 Getesteter Commit · 88bcd09
@@ -33,12 +33,12 @@ Getesteter Commit · `18988aa`
 |---|---|---|---|---|
 | 5 | In einer duplizierten Testszene ein neues Schild `B403` angelegt. Szene gestartet; die Übersicht wurde erfolgreich geladen. | Das Schild zeigt den Raumcode B403 und eine verständliche Meldung, dass keine Lehrkräfte gefunden wurden. | Am Schild erscheint nur „Lehrer im Raum B403:“ – keine Lehrkräfte und keine Meldung, dass keine gefunden wurden. | Fehlgeschlagen(Fixed) |
 
-Testdatum · 
-Getesteter Commit · 
+Testdatum 22.11.2026 
+Getesteter Commit 6117d8 
 
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
-| 6 | | | | |
+| 6 | Loggt jeweils unmittelbar vor beiden SendWebRequest()-Aufrufen den Abrufstart. Wartet, bis die Anfragen abgeschlossen sind, leert die Console und bewegt die Kamera zu zwei Schildern. | Die Angaben bleiben sichtbar. Es erscheint keine neue Abrufmeldung. | Die Angaben bleiben sichtbar. Es erscheint keine neue Abrufmeldung. | Bestanden |
 
 Testdatum · 24.11.2026  
 Getesteter Commit · `02a395f`
@@ -46,3 +46,4 @@ Getesteter Commit · `02a395f`
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
 | 7 | Internetverbindung des Rechners getrennt (WLAN/LAN aus). Anwendung gestartet und gewartet, bis die Anfrage der Übersicht beendet ist. Ergebnis am Schild und `[Testfall 7]`-Log in der Console geprüft. | Am Schild steht „Fehler beim Laden der Lehrerliste!“. | Am Schild steht „Fehler beim Laden der Lehrerliste!“. | Bestanden |
+

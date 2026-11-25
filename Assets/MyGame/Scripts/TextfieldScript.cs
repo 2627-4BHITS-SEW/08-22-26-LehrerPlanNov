@@ -33,6 +33,7 @@ namespace Tuerschild
 
             UnityWebRequest req = UnityWebRequest.Get(listUrl);
             req.certificateHandler = new BypassCertificate();
+            //Debug.Log($"[{targetRoom}] Starte Abruf der Lehrerliste: {listUrl}"); // Testing testcase 6
             await req.SendWebRequest();
             Debug.Log($"Raum: {targetRoom} | URL: {listUrl} | Status: {req.responseCode} | Ergebnis: {req.result}");
 
@@ -75,6 +76,7 @@ namespace Tuerschild
 
                 UnityWebRequest detailReq = UnityWebRequest.Get(baseUrl + link);
                 detailReq.certificateHandler = new BypassCertificate();
+                //Debug.Log($"[{targetRoom}] Starte Abruf der Detailseite: {baseUrl + link}"); //Testing Testcase 6
                 await detailReq.SendWebRequest();
 
                 // Testfall 3: Detailseite geladen?
