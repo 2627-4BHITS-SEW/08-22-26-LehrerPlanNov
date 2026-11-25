@@ -5,12 +5,12 @@ Getesteter Commit ·
 |---|---|---|---|---|
 | 1 | | | | |
 
-Testdatum · 
-Getesteter Commit · 
+**23.11.2026** · …  
+**f7a7a97** · …
 
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
-| 2 | | | | |
+| 2 | Spiel gestartet. Die GameObjects `Sign-B310` und `Sign-C312` aufgesucht und die angezeigten Lehrkräfte notiert. Anschließend mit der Schulwebsite verglichen. | Jedes Schild zeigt seinen Raum und die zugehörigen Lehrkräfte. | Raumnummer und zugeordnete Personen stimmen auf beiden Schildern exakt mit den Daten der Website überein. Keine falschen Zuordnungen. | **Bestanden** |
 
 Testdatum · 23.11.2026  
 Getesteter Commit · `2c306ec`
