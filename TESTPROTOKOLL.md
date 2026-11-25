@@ -24,7 +24,7 @@ Getesteter Commit · 7de57de
 
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
-4 | In FetchTeachers nach await req.SendWebRequest(); den Befehl `Debug.Log($"Raum: {targetRoom}` | URL: {listUrl} | Bestanden
+4 | In FetchTeachers nach await req.SendWebRequest(); den Befehl `Debug.Log($"Raum: {targetRoom}` | URL: {listUrl} | Ergebnis: {req.result}");` eingefügt und das Spiel gestartet. | Bestanden
 
 Testdatum · 23.11.2026  
 Getesteter Commit · `18988aa`
