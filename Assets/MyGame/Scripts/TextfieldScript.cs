@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
 
 namespace Tuerschild
 {
@@ -22,11 +17,11 @@ namespace Tuerschild
             targetRoom = gameObject.name.Replace("Sign-", "");
             TMP_Text textComponent = GetComponent<TMP_Text>();
 
-            textComponent.text = await FetchTeachers();
+            textComponent.text = $"Lehrer im Raum {targetRoom}:\n\n" + await FetchTeachers();
 
-            if (textComponent.text == null || textComponent.text == "")
+            if (textComponent.text == $"Lehrer im Raum {targetRoom}:\n\n")
             {
-                textComponent.text = "Keine LehrerInnen gefunden!";
+                textComponent.text = $"Lehrer im Raum {targetRoom}:\n\n" + "Keine LehrerInnen gefunden!";
             }
         }
 
@@ -36,7 +31,6 @@ namespace Tuerschild
         {
             string result = "";
 
-            // LehrerInnen-Liste laden
             UnityWebRequest req = UnityWebRequest.Get(listUrl);
             req.certificateHandler = new BypassCertificate();
             await req.SendWebRequest();
@@ -56,7 +50,6 @@ namespace Tuerschild
 
             var matches = teacherRegex.Matches(html);
 
-            result = $"Lehrer im Raum {targetRoom}:\n\n";
 
             foreach (Match m in matches)
             {
@@ -82,6 +75,9 @@ namespace Tuerschild
                 UnityWebRequest detailReq = UnityWebRequest.Get(baseUrl + link);
                 detailReq.certificateHandler = new BypassCertificate();
                 await detailReq.SendWebRequest();
+
+                // Testfall 3: Detailseite geladen?
+                Debug.Log($"[Testfall 3] Raum: {room} | Lehrkraft: {name} | URL: {detailReq.url} | HTTP-Status: {detailReq.responseCode} | Ergebnis: {detailReq.result}");
 
                 if (detailReq.result != UnityWebRequest.Result.Success)
                     continue;
