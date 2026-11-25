@@ -34,6 +34,7 @@ namespace Tuerschild
             UnityWebRequest req = UnityWebRequest.Get(listUrl);
             req.certificateHandler = new BypassCertificate();
             await req.SendWebRequest();
+            Debug.Log($"Raum: {targetRoom} | URL: {listUrl} | Status: {req.responseCode} | Ergebnis: {req.result}");
 
             if (req.result != UnityWebRequest.Result.Success)
             {
