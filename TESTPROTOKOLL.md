@@ -5,8 +5,8 @@ Getesteter Commit ·
 |---|---|---|---|---|
 | 1 | | | | |
 
-**5.11.2026** · …  
-**88bcd09** · …
+Testdatum · 5.11.2026
+Getesteter Commit · 88bcd09
 
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
