@@ -5,12 +5,12 @@ Getesteter Commit ·
 |---|---|---|---|---|
 | 1 | | | | |
 
-Testdatum · 
-Getesteter Commit · 
+**5.11.2026** · …  
+**88bcd09** · …
 
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
-| 2 | | | | |
+| 2 | Spiel gestartet. Die GameObjects `Sign-B310` und `Sign-C312` aufgesucht und die angezeigten Lehrkräfte notiert. Anschließend mit der Schulwebsite verglichen. | Jedes Schild zeigt seinen Raum und die zugehörigen Lehrkräfte. | Raumnummer und zugeordnete Personen stimmen auf beiden Schildern exakt mit den Daten der Website überein. Keine falschen Zuordnungen. | Bestanden |
 
 Testdatum · 23.11.2026  
 Getesteter Commit · `2c306ec`
@@ -19,12 +19,12 @@ Getesteter Commit · `2c306ec`
 |---|---|---|---|---|
 | 3 | Direkt nach `await detailReq.SendWebRequest();` Raum, Lehrkraft, Detail-URL, HTTP-Status und Ergebnis per `Debug.Log`. Programm gestartet und in der Konsole nach der Detail-URL gesucht. | Für die passende Detailseite erscheint HTTP 200 (Success). | Für zB `https://www.htl-salzburg.ac.at/lehrerinnen-details/grossmaier-maria-rosa-prof-bed-univ-med-b-312.html` erscheint Raum B312, HTTP 200, Ergebnis Success. Auch die übrigen geloggten Detailseiten (z. B. B305, C312, B304) liefern HTTP 200 (Success). | Bestanden |
 
-Testdatum · 
-Getesteter Commit · 
+Testdatum · 25.11.2026
+Getesteter Commit · 7de57de
 
 | Nr. | Durchführung | Soll | Ist | Status |
 |---|---|---|---|---|
-| 4 | | | | |
+4 | In FetchTeachers nach await req.SendWebRequest(); den Befehl `Debug.Log($"Raum: {targetRoom}` | URL: {listUrl} | Bestanden
 
 Testdatum · 23.11.2026  
 Getesteter Commit · `18988aa`
