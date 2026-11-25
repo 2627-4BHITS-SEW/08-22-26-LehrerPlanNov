@@ -39,6 +39,7 @@ namespace Tuerschild
             // LehrerInnen-Liste laden
             UnityWebRequest req = UnityWebRequest.Get(listUrl);
             req.certificateHandler = new BypassCertificate();
+            //Debug.Log($"[{targetRoom}] Starte Abruf der Lehrerliste: {listUrl}"); // Testing testcase 6
             await req.SendWebRequest();
 
             if (req.result != UnityWebRequest.Result.Success)
@@ -81,6 +82,7 @@ namespace Tuerschild
 
                 UnityWebRequest detailReq = UnityWebRequest.Get(baseUrl + link);
                 detailReq.certificateHandler = new BypassCertificate();
+                //Debug.Log($"[{targetRoom}] Starte Abruf der Detailseite: {baseUrl + link}"); //Testing Testcase 6
                 await detailReq.SendWebRequest();
 
                 if (detailReq.result != UnityWebRequest.Result.Success)
